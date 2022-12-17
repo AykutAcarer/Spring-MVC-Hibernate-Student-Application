@@ -1,1 +1,1 @@
-# Spring-MVC-Hibernate-Student-Application
+# Spring-MVC-Hibernate-StudentBlogApplication
