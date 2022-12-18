@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,12 +24,25 @@
             <div class="p-2 bd-highlight">
                 <div class="d-flex justify-content-center">
                    
-                    <div class="w-50">
+                    <div class="w-100">
                         
                         <h3>Student Name</h3>
-                        <p>Posts.....</p>
-                       
-                        
+                        <c:forEach var="tempPost" items="${posts}">
+	                        <div class="card mb-3" style="">
+							  <div class="row no-gutters">
+							    <div class="col-md-2">
+							      <img src="" alt="">
+							    </div>
+							    <div class="col-md-10">
+							      <div class="card-body">
+							        <h5 class="card-title">${tempPost.postTitle}</h5>
+							        <p class="card-text">${tempPost.postContent}</p>
+							        <p class="card-text">created at<small class="text-muted">${tempPost.create}</small></p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
