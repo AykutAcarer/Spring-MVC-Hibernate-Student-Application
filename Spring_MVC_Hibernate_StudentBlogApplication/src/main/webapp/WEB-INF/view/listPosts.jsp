@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Login Page</title>
+    <title>Student Post Page</title>
   </head>
   <body>
     <div class="container-sm conatiner-md container-lg container-xl">
@@ -16,7 +16,8 @@
             <div class="p-2 bd-highlight">
                 <nav class="d-flex justify-content-between navbar navbar-expand-lg navbar-light bg-light">
                     <a href="" class="navbar-brand">Logo</a>
-                    <a href="posts" class="nav-link">Login</a>                 
+                    <a href="#" class="nav-link">Logout</a>           
+                     <a href="#" class="nav-link">Settings</a>         
                 </nav>
             </div>
             <div class="p-2 bd-highlight">
@@ -24,7 +25,9 @@
                    
                     <div class="w-50">
                         
-                        <h1>Wellcome to My Website</h1>
+                        <h3>Student Name</h3>
+                        <p>Posts.....</p>
+                       
                         
                     </div>
                 </div>
