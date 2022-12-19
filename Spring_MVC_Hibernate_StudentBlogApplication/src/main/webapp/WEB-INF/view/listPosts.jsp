@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,16 +18,32 @@
             <div class="p-2 bd-highlight">
                 <nav class="d-flex justify-content-between navbar navbar-expand-lg navbar-light bg-light">
                     <a href="" class="navbar-brand">Logo</a>
-                    <a href="#" class="nav-link">Logout</a>           
-                     <a href="#" class="nav-link">Settings</a>         
+                    <div class="d-flex">
+                    	<a href="myposts" class="nav-link">My Posts</a>  
+                    	<a href="#" class="nav-link">Settings</a>
+                    	<a href="#" class="nav-link">Logout</a>                  	
+                    </div>
+                  
                 </nav>
             </div>
             <div class="p-2 bd-highlight">
-                <div class="d-flex justify-content-center">
-                   
-                    <div class="w-100">
-                        
-                        <h3>Student Name</h3>
+                <div class="d-flex flex-column">
+                   <div class="d-flex justify-content-between">
+	                  	<form:form class="d-flex mb-2">
+	                  		<div class="me-2">
+	                  			<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+	                  		</div>
+	     					<div class="">
+	     						<button class="btn btn-outline-success" type="submit">Search</button>
+	     					</div>	
+	     						
+	   					</form:form>
+	   					<div>
+	   						<a href="#" class="btn btn-sm btn-primary">Add Post</a>
+	   					</div>
+					</div>
+                    <div >
+
                         <c:forEach var="tempPost" items="${posts}">
 	                        <div class="card mb-3" style="">
 							  <div class="row no-gutters">
@@ -37,7 +54,12 @@
 							      <div class="card-body">
 							        <h5 class="card-title">${tempPost.postTitle}</h5>
 							        <p class="card-text">${tempPost.postContent}</p>
-							        <p class="card-text">created at<small class="text-muted">${tempPost.create}</small></p>
+							        <p class="card-text">created at <small class="text-muted">${tempPost.create}</small></p>
+							        <p class="card-text">updated at <small class="text-muted">${tempPost.update}</small></p>
+							        <div class="d-flex justify-content-end">
+							        	<a href="#" class="btn btn-sm btn-outline-secondary">Comment</a>
+							        </div>
+							        
 							      </div>
 							    </div>
 							  </div>

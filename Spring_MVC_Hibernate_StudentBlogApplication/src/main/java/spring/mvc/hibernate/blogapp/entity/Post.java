@@ -2,12 +2,16 @@ package spring.mvc.hibernate.blogapp.entity;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="student_posts")
@@ -33,6 +37,8 @@ public class Post {
 	@Column(name="updated_at")
 	private Date update;
 
+	
+	
 	public Post() {
 		
 	}

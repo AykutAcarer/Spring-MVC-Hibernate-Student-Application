@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import spring.mvc.hibernate.blogapp.entity.Post;
+import spring.mvc.hibernate.blogapp.entity.Student;
 
 @Repository
 public class PostDAOImpl implements PostDAO {
@@ -35,6 +36,10 @@ public class PostDAOImpl implements PostDAO {
 		//return the list
 		return thePosts;
 	}
+
+	
+
+	
 	
 	
 }
